@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #Move{
+            width: 500px;
+            height: 500px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+mouse:<span id="mouseMove"></span>
+
+<div id="test-jquery">
+    <li name="test-li1">test-li1</li>
+    <li name="test-li2">test-li2</li>
+</div>
+
+<div id="Move">
+    在这里移动鼠标试试
+</div>
+<script>
+    'use strict'
+
+    $(function () {
+        $('#Move').mousemove(function (e) {
+            $('#mouseMove').text('X:'+e.pageX+'Y:'+e.pageY)
+        })
+
+        $('#Move').mouseleave(function (e) {
+            $('#mouseMove').text("")
+        });
+        var rr = 123;
+        var qq = $('#test-jquery li[name=test-li1]').text();
+        console.log(qq);
+        $('#test-jquery li[name=test-li2]').html(qq);
+    })
+
+</script>
+</body>
+
+</html>
