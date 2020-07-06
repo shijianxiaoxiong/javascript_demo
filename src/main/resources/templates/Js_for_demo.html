@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        'use strict'                             //ES6 严格模式
+        var arr = ['a','b','c'];
+        var set = new Set(['A', 'B', 'C']);
+        var map = new Map([[1,2],[3,4],[4,5]]);
+        var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+
+        /*--------------------splice万能拼接方法---------------------*/
+        arr.splice(2, 2,"tanghs")                                             //从指定的索引开始删除若干元素，然后再
+        console.log(arr)                                                      //从该位置添加若干元素
+
+        /*--------------------slice分割方法[包头不包尾]---------------------*/
+        arr.slice(0,3);
+
+        /*--------------------.forEach遍历循环方法---------------------*/
+
+        arr.forEach(function (value, index, array) {
+            console.log(value+"--分割--"+index+"--分割--"+array);
+        })
+
+        set.forEach(function (value, value2, set) {
+            console.log(value+"--分割--"+value2+"--分割--"+set);
+        })
+
+        map.forEach(function (value, key) {
+            console.log("value: "+value+"key: "+key)
+        })
+
+
+        /*---------------------of 遍历循环方法--------------------*/
+
+        for (let x of map){
+            console.log(x[0]+"--分割--"+x[1])
+        }
+
+        for (let x of set) {
+            console.log(x)
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

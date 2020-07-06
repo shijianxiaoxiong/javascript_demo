@@ -25,7 +25,7 @@ mouse:<span id="mouseMove"></span>
 </div>
 <script>
     'use strict'
-
+    //函数
     $(function () {
         $('#Move').mousemove(function (e) {
             $('#mouseMove').text('X:'+e.pageX+'Y:'+e.pageY)
@@ -35,8 +35,10 @@ mouse:<span id="mouseMove"></span>
             $('#mouseMove').text("")
         });
         var rr = 123;
+        //取值
         var qq = $('#test-jquery li[name=test-li1]').text();
         console.log(qq);
+        //赋值
         $('#test-jquery li[name=test-li2]').html(qq);
     })
 
